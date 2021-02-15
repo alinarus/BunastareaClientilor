@@ -1,0 +1,113 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active mr-5">
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-secondary" (click)="logOut()"><i class="fas fa-sign-out-alt"></i>Log Out</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div>
+    <br>
+    <div class="component-2 card px-5 py-5 mx-5" style="background-color: rgb(221, 215, 224);  border-radius: 5%;">
+        <div class="col-12 d-flex">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Total orders</th>
+                            <th>Average orders</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{totalOrders}}</td>
+                            <td>{{averageSpent}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div>
+            <h4 class="text-center mb-4">
+                Suggestions
+            </h4>
+        </div>
+        <div class="col-12 d-flex">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Product name</th>
+                            <th>Product stock code</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let suggestion of suggestions">
+                            <td>{{suggestion.product_name}}</td>
+                            <td>{{suggestion.product_stock_code}}</td>
+                            <td>{{suggestion.product_price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div>
+            <h4 class="text-center mb-4">
+                Last invoices
+            </h4>
+        </div>
+        <div class="col-12 d-flex">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center">Description</th>
+                            <th class="text-center">Stock code</th>
+                            <th class="text-center">Invoice number</th>
+                            <th class="text-center">Invoice date</th>
+                            <th class="text-center">Invoice price</th>
+                            <th class="text-center">Total for invoice</th>
+                            <th class="text-center">Unit price</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Country</th>
+                            <th class="text-center">Time difference</th>
+                            <th class="text-center">Total quantity</th>
+                            <th class="text-center">Total orders</th>
+                            <th class="text-center">Clusters</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let invoice of lastInvoices">
+                            <td class="text-center">{{invoice.Description}}</td>
+                            <td class="text-center">{{invoice.StockCode}}</td>
+                            <td class="text-center">{{invoice.InvoiceNo}}</td>
+                            <td class="text-center">{{invoice.InvoiceDate}}</td>
+                            <td class="text-center">{{invoice.InvoicePrice}}</td>
+                            <td class="text-center">{{invoice.TotalForinvoice}}</td>
+                            <td class="text-center">{{invoice.UnitPrice}}</td>
+                            <td class="text-center">{{invoice.Quantity}}</td>
+                            <td class="text-center">{{invoice.Country}}</td>
+                            <td class="text-center">{{invoice.TimeDiff}}</td>
+                            <td class="text-center">{{invoice.TotalQuantity}}</td>
+                            <td class="text-center">{{invoice.TotalOrders}}</td>
+                            <td class="text-center">{{invoice.Clusters}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

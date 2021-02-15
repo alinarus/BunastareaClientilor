@@ -1,0 +1,24 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+body {
+    margin: 0;
+}
+
+.card.card-1 {
+    background: #343a40;
+    color: white;
+    background-size: cover;
+    /* margin: 0 100px; */
+    height: 127px;
+}
+
+.card.card-2 {
+    background: #343a40;
+    color: white;
+    background-size: cover;
+    height: 127px;
+}
+
+td,
+h4 {
+    color: black;
+}
